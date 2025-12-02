@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "consolidation-poc",
   "private": true,
   "scripts": {
     "build": "turbo run build",
