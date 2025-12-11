@@ -1,7 +1,6 @@
 import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
-import { auth } from "./_lib/auth";
+import { auth } from "@repo/auth/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -45,7 +44,7 @@ export default async function Home() {
           priority
         />
         <h1>Application #2</h1>
-        <Button>Go to application #1</Button>
+        <a href="/" className={styles.secondary}>Go to application #1</a>
        </main>
     </div>
   );

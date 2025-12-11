@@ -1,6 +1,6 @@
 'use client';
 
-import { authClient } from '../_lib/auth-client';
+import { authClient } from '@repo/auth/auth-client';
 
 export default function Signin() {
     const handleSignin = async () => {

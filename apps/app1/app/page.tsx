@@ -1,9 +1,8 @@
 import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
 import { headers } from "next/headers";
-import { auth } from "./_lib/auth";
 import { redirect } from "next/navigation";
+import { auth } from "@repo/auth/auth";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -52,7 +51,7 @@ export default async function Home() {
           priority
         />
         <h1>Application #1</h1>
-        <Button route="app2">Go to application #2</Button>
+        <a href="/app2" className={styles.secondary}>Go to application #2</a>
        </main>
     </div>
   );

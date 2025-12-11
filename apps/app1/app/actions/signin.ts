@@ -1,6 +1,6 @@
 'use server';
 
-import { auth } from "../_lib/auth";
+import { auth } from "@repo/auth/auth";
 
 export async function signin() {
     const data = await auth.api.signInWithOAuth2({
