@@ -2,7 +2,7 @@ import Image, { type ImageProps } from "next/image";
 import styles from "./page.module.css";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { auth } from "@repo/auth/auth";
+import { auth } from "./_lib/auth";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;

@@ -3,7 +3,7 @@ import { genericOAuth, openAPI } from 'better-auth/plugins';
 import { nextCookies } from "better-auth/next-js";
 import { decodeJwt } from 'jose';
 
-export const auth = betterAuth({
+export const createAuthInstance = (clientId: string, clientSecret: string, discoveryUrl: string) => betterAuth({
   trustedOrigins: ["http://localhost:3000", "http://localhost:3001"],
   logger: {
     level: 'debug',
@@ -33,9 +33,9 @@ export const auth = betterAuth({
         // not using pre-configured okta provider because it does not support advanced options like getUserInfo
         {
           providerId: 'okta',
-          clientId: process.env.OKTA_CLIENT_ID as string,
-          clientSecret: process.env.OKTA_CLIENT_SECRET as string,
-          discoveryUrl: process.env.OKTA_ISSUER as string,
+          clientId,
+          clientSecret,
+          discoveryUrl,
           scopes: ['openid', 'email', 'profile', 'groups', 'offline_access'],
           pkce: true,
           overrideUserInfo: true,

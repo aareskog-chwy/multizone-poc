@@ -13,7 +13,7 @@
     "next-env.d.ts",
     "next.config.js",
     ".next/types/**/*.ts"
-, "../../packages/auth/src/auth-client.ts", "../../packages/auth/src/auth.ts"  ],
+  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,6 +1,6 @@
 import Image, { type ImageProps } from "next/image";
 import styles from "./page.module.css";
-import { auth } from "@repo/auth/auth";
+import { auth } from "./_lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
