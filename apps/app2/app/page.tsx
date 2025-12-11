@@ -1,6 +1,9 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
 import styles from "./page.module.css";
+import { auth } from "./_lib/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -18,7 +21,17 @@ const ThemeImage = (props: Props) => {
   );
 };
 
-export default function Home() {
+export default async function Home() {
+  const session = await auth.api.getSession({
+    headers: await headers() // you need to pass the headers object.
+  });
+
+  console.log('app2 session', session);
+
+  if (!session) {
+    redirect(`${process.env.NEXT_PUBLIC_APP1_URL}/signin`);
+  }
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>

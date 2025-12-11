@@ -10,10 +10,26 @@
     "@standard-schema/spec" "^1.0.0"
     zod "^4.1.12"
 
+"@better-auth/core@1.4.6":
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/@better-auth/core/-/core-1.4.6.tgz#7b243ef95b01b92594c5212d8dd7eda4b06392c1"
+  integrity sha512-cYjscr4wU5ZJPhk86JuUkecJT+LSYCFmUzYaitiLkizl+wCr1qdPFSEoAnRVZVTUEEoKpeS2XW69voBJ1NoB3g==
+  dependencies:
+    "@standard-schema/spec" "^1.0.0"
+    zod "^4.1.12"
+
 "@better-auth/telemetry@1.4.5":
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/@better-auth/telemetry/-/telemetry-1.4.5.tgz#adbbe5b194ffa7e1619d4bdf0867a74caee91c5e"
   integrity sha512-r3NyksbaBYA10SC86JA6QwmZfHwFutkUGcphgWGfu6MVx1zutYmZehIeC8LxTjOWZqqF9FI8vLjglWBHvPQeTg==
+  dependencies:
+    "@better-auth/utils" "0.3.0"
+    "@better-fetch/fetch" "1.1.18"
+
+"@better-auth/telemetry@1.4.6":
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/@better-auth/telemetry/-/telemetry-1.4.6.tgz#70832899219258b97b09f327515620321843d5a0"
+  integrity sha512-idc9MGJXxWA7zl2U9zsbdG6+2ZCeqWdPq1KeFSfyqGMFtI1VPQOx9YWLqNPOt31YnOX77ojZSraU2sb7IRdBMA==
   dependencies:
     "@better-auth/utils" "0.3.0"
     "@better-fetch/fetch" "1.1.18"
@@ -645,10 +661,39 @@ better-auth@^1.4.5:
     nanostores "^1.0.1"
     zod "^4.1.12"
 
+better-auth@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/better-auth/-/better-auth-1.4.6.tgz#1f4d3b97c6ac8999f63bf47e73b2cb849ff72195"
+  integrity sha512-5wEBzjolrQA26b4uT6FVVYICsE3SmE/MzrZtl8cb2a3TJtswpP8v3OVV5yTso+ef9z85swgZk0/qBzcULFWVtA==
+  dependencies:
+    "@better-auth/core" "1.4.6"
+    "@better-auth/telemetry" "1.4.6"
+    "@better-auth/utils" "0.3.0"
+    "@better-fetch/fetch" "1.1.18"
+    "@noble/ciphers" "^2.0.0"
+    "@noble/hashes" "^2.0.0"
+    better-call "1.1.5"
+    defu "^6.1.4"
+    jose "^6.1.0"
+    kysely "^0.28.5"
+    ms "4.0.0-nightly.202508271359"
+    nanostores "^1.0.1"
+    zod "^4.1.12"
+
 better-call@1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/better-call/-/better-call-1.1.4.tgz#4773dadec4c898393528107b14f4a4635e4476c6"
   integrity sha512-NJouLY6IVKv0nDuFoc6FcbKDFzEnmgMNofC9F60Mwx1Ecm7X6/Ecyoe5b+JSVZ42F/0n46/M89gbYP1ZCVv8xQ==
+  dependencies:
+    "@better-auth/utils" "^0.3.0"
+    "@better-fetch/fetch" "^1.1.4"
+    rou3 "^0.7.10"
+    set-cookie-parser "^2.7.1"
+
+better-call@1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/better-call/-/better-call-1.1.5.tgz#c97c077574da3cca0ef11ad1afed4f5fb86c0bf0"
+  integrity sha512-nQJ3S87v6wApbDwbZ++FrQiSiVxWvZdjaO+2v6lZJAG2WWggkB2CziUDjPciz3eAt9TqfRursIQMZIcpkBnvlw==
   dependencies:
     "@better-auth/utils" "^0.3.0"
     "@better-fetch/fetch" "^1.1.4"

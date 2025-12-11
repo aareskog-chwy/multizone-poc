@@ -26,7 +26,7 @@ const getSesssion = async () => {
     headers: await headers() // you need to pass the headers object.
   });
 
-  console.log('final session', session);
+  console.log('app1 session', session);
 
   if (!session) {
     redirect('/signin');
