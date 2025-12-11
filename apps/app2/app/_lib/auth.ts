@@ -1,4 +1,4 @@
-import { createAuthInstance } from '@repo/auth/auth';
+import { createAuthInstance } from '@repo/auth/config';
 
 export const auth = createAuthInstance(
     process.env.OKTA_CLIENT_ID as string,
