@@ -5,9 +5,6 @@ import { decodeJwt } from 'jose';
 
 export const createAuthInstance = (clientId: string, clientSecret: string, discoveryUrl: string) => betterAuth({
   trustedOrigins: ["http://localhost:3000", "http://localhost:3001"],
-  logger: {
-    level: 'debug',
-  },
   account: {
     updateAccountOnSignIn: true
   },
