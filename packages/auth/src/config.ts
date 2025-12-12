@@ -4,10 +4,7 @@ import { nextCookies } from "better-auth/next-js";
 import { decodeJwt } from 'jose';
 
 export const createAuthInstance = (clientId: string, clientSecret: string, discoveryUrl: string) => betterAuth({
-  trustedOrigins: ["http://localhost:3000", "http://localhost:3001"],
-  logger: {
-    level: 'debug',
-  },
+  trustedOrigins: ["http://localhost:3000", "http://localhost:3001", "http://localhost:3002"],
   account: {
     updateAccountOnSignIn: true
   },
@@ -18,6 +15,7 @@ export const createAuthInstance = (clientId: string, clientSecret: string, disco
         type: 'string',
         input: false,
         returned: true,
+        unique: true,
       },
       roles: {
         required: false,

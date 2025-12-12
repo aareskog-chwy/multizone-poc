@@ -3,6 +3,8 @@ import styles from "./page.module.css";
 import { auth } from "./_lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { LogoutButton } from "@repo/auth/logout";
+import { authClient } from "./_lib/auth-client";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -28,7 +30,7 @@ export default async function Home() {
   console.log('app2 session', session);
 
   if (!session) {
-    redirect(`${process.env.NEXT_PUBLIC_APP1_URL}/signin`);
+    redirect(`${process.env.NEXT_PUBLIC_URL}/signin`);
   }
 
   return (
@@ -45,6 +47,7 @@ export default async function Home() {
         />
         <h1>Application #2</h1>
         <a href="/" className={styles.secondary}>Go to application #1</a>
+        <LogoutButton authClient={authClient} redirectUrl={`${process.env.NEXT_PUBLIC_URL}/signin`} className={styles.secondary}>Logout</LogoutButton>
        </main>
     </div>
   );
