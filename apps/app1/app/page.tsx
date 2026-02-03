@@ -3,6 +3,8 @@ import styles from "./page.module.css";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { auth } from "./_lib/auth";
+import { LogoutButton } from "@repo/auth/logout";
+import { authClient } from "./_lib/auth-client";
 
 type Props = Omit<ImageProps, "src"> & {
   srcLight: string;
@@ -52,6 +54,7 @@ export default async function Home() {
         />
         <h1>Application #1</h1>
         <a href="/app2" className={styles.secondary}>Go to application #2</a>
+        <LogoutButton authClient={authClient} redirectUrl={'/signin'} className={styles.secondary}>Logout</LogoutButton>
        </main>
     </div>
   );

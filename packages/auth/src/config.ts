@@ -15,6 +15,7 @@ export const createAuthInstance = (clientId: string, clientSecret: string, disco
         type: 'string',
         input: false,
         returned: true,
+        unique: true,
       },
       roles: {
         required: false,
